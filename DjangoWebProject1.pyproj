@@ -70,7 +70,6 @@
     <Content Include="app\templates\app\basket.html" />
     <Content Include="app\templates\app\blog.html" />
     <Content Include="app\templates\app\blogpost.html" />
-    <Content Include="app\templates\app\calculator.html" />
     <Content Include="app\templates\app\catalog.html" />
     <Content Include="app\templates\app\developers.html" />
     <Content Include="app\templates\app\links.html" />
@@ -81,7 +80,6 @@
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
-    <Content Include="app\static\app\content\bootstrap.min.css" />
     <Content Include="app\static\app\content\site.css" />
     <Content Include="app\static\app\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="app\static\app\fonts\glyphicons-halflings-regular.svg" />
