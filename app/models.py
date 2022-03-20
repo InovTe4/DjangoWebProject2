@@ -7,7 +7,7 @@ from django.db import models
 # Create your models here.
 from datetime import datetime 
 from django.contrib import admin #добавили использование административного модуля
-from django.core.urlresolvers import reverse
+#from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User # лаба 9
 
 # Модель данных блога
