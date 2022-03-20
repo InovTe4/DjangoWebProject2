@@ -40,7 +40,7 @@ urlpatterns = [
     url(r'^basket$', app.views.basket, name='basket'),
     url(r'^(?P<parametr1>\d+)', app.views.delete, name='delete'), # new1
     url(r'^login/$',
-        django.contrib.auth.views.loginView,
+        django.contrib.auth.views.login,
         {
             'template_name': 'app/login.html',
             'authentication_form': app.forms.BootstrapAuthenticationForm,
@@ -52,7 +52,7 @@ urlpatterns = [
         },
         name='login'),
     url(r'^logout$',
-        django.contrib.auth.views.logoutView,
+        django.contrib.auth.views.logout,
         {
             'next_page': '/',
         },
