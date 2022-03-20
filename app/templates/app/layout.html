@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - InovTech</title>
+    {% load staticfiles %}
+    <link rel="shortcut icon" type="app\static\app\content" href="{% static "favicon.ico" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+    <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <a href="/" class="navbar-brand"> <img src="{% static 'app\content\logo.jpg' %}" alt="logo" /> </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'home' %}">Главная</a font-size></li>
+                    <li><a href="{% url 'about' %}">О нас</a></li>
+                    <li><a href="{% url 'contact' %}">Контакты</a></li>
+                    <li><a href="{% url 'blog' %}">Статьи</a></li> <!-- лаба 8 -->
+                    <li><a href="{% url 'links' %}">Полезные ресурсы</a></li>
+                    <li>Полезные ресурсы</a></li>
+                    {% if user.is_authenticated %} <!--New1-->
+                    <li><a href="{% url 'pool' %}">Обратная связь</a></li>
+                    {% endif %}
+                    {% if user.is_authenticated and not user.is_superuser %} <!--New1-->
+                    <li><a href="{% url 'catalog' %}">Заказ услуги</a></li>
+                    {% endif %}
+                    {% if user.is_superuser %} <!-- лаба 10 v -->
+                    <li><a href="{% url 'newpost' %}"> Добавление статьи </a></li>
+                    {% endif %}
+                    <li><a href="{% url 'videopost' %}">Видео</a></li> <!-- лаба 10 ^ -->
+                </ul>
+                {% if user.is_authenticated and not user.is_superuser %} <!--New1-->
+                    <a class="navbar-brand" href="{% url 'basket' %}"><img class="basket" src="{% static 'app\content\basket.png' %}" alt="logo" /></a>
+                    {% endif %}
+
+                {% include 'app/loginpartial.html' %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+{% block content %}{% endblock %}
+        <hr/>
+        <footer>
+            <p class="footer">&copy; {{ year }} <br />
+                InovTech company<p>
+        </footer>
+    </div>
+
+  
+    <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
+    <script src="{% static 'app/scripts/respond.js' %}"></script>
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

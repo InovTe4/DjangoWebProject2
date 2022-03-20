@@ -1,0 +1,20 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+    <content>
+        {% load staticfiles %}
+    </content>
+    <h2>Наши разработчики</h2>
+    <a class="btn-dlinks-default" href ="https://vk.com/greenapelsin" target="_blank"> <img src="{% static 'app/content/Никита.png' %}" alt="Лимаренко Никита"/></a> 
+        <p style="margin:15px 0 0 0;">Лимаренко Никита</p>
+        <p>Full-stack разработчик</p>
+    <a class="btn-dlinks-default" href ="https://vk.com/id105596941" target="_blank"> <img src="{% static 'app/content/Тёма.png' %}" alt="Семушин Артём"/></a>
+        <p style="margin:15px 0 0 0;">Семушин Артём</p>
+        <p>Product-manager</p>
+    <a class="btn-dlinks-default" href ="https://vk.com/spacecreator" target="_blank"> <img src="{% static 'app/content/Толя.png' %}" alt="Корейченко Анатолий"/></a>
+        <p style="margin:15px 0 0 0;">Корейченко Анатолий</p>
+        <p>Frontend-разработчик</p>
+    <a class="btn-dlinks-default" href ="https://vk.com/dmit1996" target="_blank"> <img src="{% static 'app/content/я.png' %}" alt="Иванов Дмитрий"/></a>
+        <p style="margin:15px 0 0 0;">Иванов Дмитрий</p>
+        <p>Backend-разработчик</p>     
+{% endblock %}

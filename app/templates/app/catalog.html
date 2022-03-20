@@ -1,0 +1,12 @@
+﻿{% extends "app/layout.html" %} <!-- New1 -->
+{% block content %}
+{% if user.is_authenticated %}  <!--  лаба 9 v -->
+<h3>Описание услуги:</h3>
+<form method="POST" >{% csrf_token %} {# защита от атак CSRF #}
+<div class="testee">
+    {{form.as_p}}
+<button type="submit" class="save btn btn-default" > Добавить </button>
+</div>
+</form>
+{% endif %} 
+{% endblock %}

@@ -1,0 +1,19 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+    <content>
+        {% load staticfiles %}
+    </content>
+    <h2>Информация о средах разработки</h2>
+    <div class="dlinks">
+    <a class="btn-dlinks-default" href ="https://visualstudio.microsoft.com/ru/vs/features/" target="_blank"> <img src="{% static 'app/content/Visual Studio.png' %}" alt="Logo1"/></a>
+    <a class="btn-dlinks-default" href ="https://lazarus-rus.ru/features/" target="_blank"> <img src="{% static 'app/content/Lazarus.png' %}" alt="Logo2"/></a>
+    <a class="btn-dlinks-default" href ="https://timeweb.com/ru/community/articles/pycharm-ide-dlya-python-1" target="_blank"> <img src="{% static 'app/content/Pycharm.png' %}" alt="Logo3"/></a>
+    </div>
+    <h2 style="margin: 150px 0 0 0;">В сферу нашей деятельности входит:</h2>
+        <li>Разработка современных сайтов</li>
+        <li>Разработка ПО</li>
+        <li>Разработка игр</li>
+        <li>Доработка ПО и сайтов</li>
+        <li>Настройка сайтов</li>
+{% endblock %}

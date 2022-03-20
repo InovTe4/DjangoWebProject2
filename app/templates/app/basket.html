@@ -1,0 +1,18 @@
+﻿{% extends "app/layout.html" %} <!-- New1 -->
+{% block content %}
+{% if user.is_authenticated %}  <!--  лаба 9 v -->
+<h3>Заказанные услуги:</h3>
+<form method="POST" >{% csrf_token %} {# защита от атак CSRF #}
+</form>
+{% else %}
+<h3> Для добавления своего заказа, пожалуйста, авторизуйтесь </h3>
+{% endif %} 
+{% for catalog in zakaz %}
+<hr/>
+<h7 class="catalog-date"> Дата заказа:{{catalog.date}} </h7>
+<h5 class="catalog-author">Заказчик: {{catalog.author}} </h5>
+<p class="catalog-text"> {{catalog.text|linebreaksbr}} </p>
+<p class="catalog-status"> Статус заказа: {{catalog.status}} </p>
+<p><a class="btn btn-default" href="{% url 'delete' parametr1=catalog.id %}"> Удалить </a> </p>
+{% endfor %} <!--  лаба 9 ^ -->
+{% endblock %}

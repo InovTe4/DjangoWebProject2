@@ -1,0 +1,3 @@
+J:\DIMA\Projects\DjangoWebProject1(V1.3)\DjangoWebProject1\obj\Debug\DjangoWebProject1.pyproj.CoreCompileInputs.cache
+J:\DIMA\Projects\Web\DjangoWebProject1(V1.3)\DjangoWebProject1\obj\Debug\DjangoWebProject1.pyproj.CoreCompileInputs.cache
+J:\DIMA\Projects\Web\DjangoWebProject1(V1.3) — копия\DjangoWebProject1\obj\Debug\DjangoWebProject1.pyproj.CoreCompileInputs.cache
